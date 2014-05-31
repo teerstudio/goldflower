@@ -2,7 +2,7 @@
   include('config.php');
 ?>
 <!DOCTYPE html>
-<html ng-app="bps">
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="It's a good product">
