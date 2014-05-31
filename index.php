@@ -8,9 +8,7 @@
     <meta name="description" content="It's a good product">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-    Suggestmob Application - Manage your suggestion cards and view the data with the report tools.
-    </title>
+    <title>Commentator Comment : GoldFlower :)</title>
 
     <?='<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -28,8 +26,8 @@
 
           <div class="row">
             <div class="col-lg-9 col-md-9 main-content" style="width:1040px; margin:auto">
-              <h3 class="mt20 page-header-div"><i class="icon-list-alt"></i> Commentator</h3>
-              <p>The list of commentators in THailand</p>
+              <h3 class="mt20 page-header-div"><i class="icon-list-alt"></i> Commentator Comment : GoldFlower :)</h3>
+              <!--<p>The list of commentators in THailand</p> -->
 
 
                 <div ng-show="showRoster">
@@ -107,6 +105,10 @@ border-bottom-left-radius: 4px;
 }
 .pName a:hover{
 	color:#06F;
+	
+}
+.page-header-div{
+	font-size:36px; color:#FFC; font-weight:bold;
 	
 }
 				  </style>
