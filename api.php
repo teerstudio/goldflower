@@ -12,7 +12,7 @@
   elseif($action == 'show'){
     if($get == 'list'){
       $query = 'SELECT * FROM tb_profile';
-      $result = mysql_query($query) or die('Connection Fail!!!');
+      $result = mysql_query($query) or die(mysql_error());
       $count = 0;
       while($objResult = mysql_fetch_array($result)){
         $response['data'][$count] = array(
