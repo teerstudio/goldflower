@@ -1,4 +1,5 @@
 <?php
+  include('config.php');
   $action = isset($_GET['action']) ? $_GET['action'] : isset($_POST['action']) ? $_POST['action'] : null;
   $response = array('data' => array());
   if($action == 'add'){
