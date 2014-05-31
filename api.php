@@ -1,6 +1,6 @@
 <?php
   $action = isset($_GET['action']) ? $_GET['action'] : isset($_POST['action']) ? $_POST['action'];
-  $response = array();
+  $response = array('data' => array());
   if($action == 'add'){
 
   }
