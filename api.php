@@ -33,7 +33,7 @@
 
   }
   else{
-    $response['data'] = 'API Working.'
+    $response['data'] = 'API Working.';
   }
 
   echo json_encode($response);
