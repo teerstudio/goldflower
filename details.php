@@ -22,47 +22,25 @@
   </head>
   <body>
     <div id="wrap">
-
+      <?php
+        $query = 'SELECT * FROM tb_profile WHERE id = '.$_GET['id'];
+        $result = mysql_query($query) or die(mysql_error());
+      ?>
       <div class="content11" style="margin-bottom:20px;">
         <div class="container">
 
           <div class="row">
-            <div class="col-lg-9 col-md-9 main-content">
-              <h3 class="mt20 page-header-div"><i class="icon-list-alt"></i> Commentator</h3>
-              <p>The list of commentators in THailand</p>
-
-
-                <div ng-show="showRoster">
-                  <p translate="HOME.ROSTER.DETAIL"></p>
-
-                  <div>
-                    <table class="table table-striped table-hover table-bordered">
-                      <thead>
-                        <tr>
-                          <th class="name">Name</th>
-                          <!-- <th class="detail">Detail</th> -->
-                          <th class="rating">Rating</th>
-                          <th class="image">Image</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php
-                          $query = 'SELECT * FROM tb_profile';
-                          $result = mysql_query($query) or die(mysql_error());
-                          while($objResult = mysql_fetch_array($result)){
-                            echo '<tr>';
-                            echo  '<td><a href="detail.php?pid='.$objResult['id'].'">'.$objResult['fullname'].'</a></td>';
-                            // echo  '<td>'.$objResult['detail'].'</td>';
-                            echo  '<td></td>';
-                            echo  '<td><img width="64" src="'.$objResult['image'].'"></td>';
-                            echo '</tr>';
-                          }
-                        ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+            <div class="col-lg-9 col-md-9">
+              <?php echo '<img src="'.$result['image'].'">'; ?>
             </div>
+            <div class="col-lg-3 col-md-3">
+              RATING...
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-3">Detail</div>
+            <div class="col-lg-9 col-md-9"><?php echo $result['detail']; ?></div>
           </div>
         </div>
       </div>

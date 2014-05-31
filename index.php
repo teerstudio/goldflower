@@ -31,10 +31,7 @@
               <h3 class="mt20 page-header-div"><i class="icon-list-alt"></i> Commentator</h3>
               <p>The list of commentators in THailand</p>
 
-
                 <div ng-show="showRoster">
-                  <p translate="HOME.ROSTER.DETAIL"></p>
-
                   <div>
                     <table class="table table-striped table-hover table-bordered">
                       <thead>
