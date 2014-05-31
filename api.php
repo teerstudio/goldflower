@@ -1,7 +1,7 @@
 <?php
   // include('config.php');
   $action = isset($_GET['action']) ? $_GET['action'] : null;
-  $get = isset($_GET['get']) ? $_GET['get'] : null;
+  $get = isset($_GET['get']) ? $_GET['get'] : null
   $response = array('data' => array());
 
   //  action=add
