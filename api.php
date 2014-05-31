@@ -1,5 +1,5 @@
 <?php
-  $action = isset($_GET['action']) ? $_GET['action'] : isset($_POST['action']) ? $_POST['action'];
+  $action = isset($_GET['action']) ? $_GET['action'] : isset($_POST['action']) ? $_POST['action'] : null;
   $response = array('data' => array());
   if($action == 'add'){
 
@@ -14,5 +14,5 @@
 
   }
 
-  echo json_decode($response);
+  echo json_encode($response);
 ?>
