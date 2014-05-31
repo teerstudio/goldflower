@@ -1,10 +1,22 @@
 <?php
   include('config.php');
-  header('Content-Type: application/json');
-  $action = isset($_GET['action']) ? $_GET['action'] : null;
-  $get = isset($_GET['get']) ? $_GET['get'] : null;
-  $response = array('data' => array());
+  $action = null;
+  if(isset($_GET['action'])){
+    $action = $_GET['action'];
+  }
+  elseif(isset($_POST['action'])){
+    $action = $_POST['action'];
+  }
 
+  $get = null;
+  if(isset($_GET['get'])){
+    $get = $_GET['get'];
+  }
+  elseif(isset($_POST['get'])){
+    $get = $_POST['get'];
+  }
+
+  $response = array('data' => array());
   //  action=add
   if($action == 'add'){
 
@@ -38,5 +50,7 @@
     $response['data'] = 'API Working.';
   }
 
+  header('Content-Type: application/json');
+  echo"<meta http-equiv='Content-Type' content='text/html; charset=windows-874' />";
   echo json_encode($response);
 ?>
