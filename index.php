@@ -50,11 +50,11 @@
                           $query = 'SELECT * FROM tb_profile';
                           $result = mysql_query($query) or die(mysql_error());
                           while($objResult = mysql_fetch_array($result)){
-                            echo '<tr ng-repeat="survey in surveys">';
+                            echo '<tr>';
                             echo  '<td>'.$objResult['fullname'].'</td>';
                             echo  '<td>'.$objResult['detail'].'</td>';
                             echo  '<td></td>';
-                            echo  '<td><img width="64" ng-src="'.$objResult['image'].'"></td>';
+                            echo  '<td><img width="64" src="'.$objResult['image'].'"></td>';
                             echo '</tr>';
                           }
                         ?>
