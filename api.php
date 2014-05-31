@@ -11,8 +11,17 @@
   //  action=show
   elseif($action == 'show'){
     if($get == 'list'){
-      $query = '';
-      $db = mysql_query($query);
+      $query = 'SELECT * FROM tb_profile';
+      $result = mysql_query($query) or die('Connection Fail!!!');
+      $count = 0;
+      while($objResult = mysql_fetch_array($result)){
+        $response['data'][$count] = array(
+          'id'       => $objResult['id'],
+          'fullname' => $objResult['fullname'],
+          'image'    => $objResult['image'],
+          'detail'   => $objResult['detail']
+        )
+      }
     }
   }
   //  action=update
