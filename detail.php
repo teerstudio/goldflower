@@ -23,7 +23,7 @@
   <body>
     <div id="wrap">
       <?php
-        $query = 'SELECT * FROM tb_profile WHERE id = '.$_GET['id'];
+        $query = 'SELECT * FROM tb_profile WHERE id = '.$_GET['pid'];
         $result = mysql_query($query) or die(mysql_error());
       ?>
       <div class="content11" style="margin-bottom:20px;">
