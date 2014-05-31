@@ -56,6 +56,7 @@
             <div class="col-lg-9 col-md-9">
             <form action="detail.php" method="post">
               <textarea name="message" cols="100" rows="10"></textarea>
+              <input type="submit" value="Add Comment" />
             </form>
             </div>
           </div>
