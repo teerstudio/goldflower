@@ -3,5 +3,5 @@
   $host     = "localhost";
   $username = "goldflower";
   $password = "goldflower";
-  $connect  = mysql_connect($host,$username,$password);
+  $connect  = mysql_connect($host, $username, $password);
   $db       = mysql_select_db("goldflower");
