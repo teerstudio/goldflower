@@ -17,9 +17,9 @@
       while($objResult = mysql_fetch_array($result)){
         $response['data'][$count] = array(
           'id'       => $objResult['id'],
-          'fullname' => $objResult['fullname'],
+          'fullname' => iconv("TIS-620", "UTF-8", $objResult['fullname']),
           'image'    => $objResult['image'],
-          'detail'   => $objResult['detail']
+          'detail'   => iconv("TIS-620", "UTF-8", $objResult['detail'])
         );
         $count++;
       }
