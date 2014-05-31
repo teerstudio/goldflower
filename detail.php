@@ -54,7 +54,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-3">Comment</div>
             <div class="col-lg-9 col-md-9">
-            <form action="detail.php" method="post">
+            <form action="detail.php?pid=<?php echo $_GET['pid']; ?>" method="post">
               <textarea name="message" cols="100" rows="10"></textarea>
               <input type="submit" value="Add Comment" />
             </form>
