@@ -30,35 +30,30 @@
             <div class="col-lg-9 col-md-9 main-content">
               <h3 class="mt20 page-header-div"><i class="icon-list-alt"></i> Commentator</h3>
               <p>The list of commentators in THailand</p>
-
-                <div ng-show="showRoster">
-                  <div>
-                    <table class="table table-striped table-hover table-bordered">
-                      <thead>
-                        <tr>
-                          <th class="name">Name</th>
-                          <!-- <th class="detail">Detail</th> -->
-                          <th class="rating">Rating</th>
-                          <th class="image">Image</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php
-                          $query = 'SELECT * FROM tb_profile';
-                          $result = mysql_query($query) or die(mysql_error());
-                          while($objResult = mysql_fetch_array($result)){
-                            echo '<tr>';
-                            echo  '<td><a href="detail.php?pid='.$objResult['id'].'">'.$objResult['fullname'].'</a></td>';
-                            // echo  '<td>'.$objResult['detail'].'</td>';
-                            echo  '<td></td>';
-                            echo  '<td><img width="64" src="'.$objResult['image'].'"></td>';
-                            echo '</tr>';
-                          }
-                        ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              <table class="table table-striped table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th class="name">Name</th>
+                    <!-- <th class="detail">Detail</th> -->
+                    <th class="rating">Rating</th>
+                    <th class="image">Image</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    $query = 'SELECT * FROM tb_profile';
+                    $result = mysql_query($query) or die(mysql_error());
+                    while($objResult = mysql_fetch_array($result)){
+                      echo '<tr>';
+                      echo  '<td><a href="detail.php?pid='.$objResult['id'].'">'.$objResult['fullname'].'</a></td>';
+                      // echo  '<td>'.$objResult['detail'].'</td>';
+                      echo  '<td></td>';
+                      echo  '<td><img width="64" src="'.$objResult['image'].'"></td>';
+                      echo '</tr>';
+                    }
+                  ?>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
