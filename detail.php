@@ -25,6 +25,7 @@
     if(isset($_POST['message'])){
       $postname = isset($_POST['postname']) ? $_POST['postname'] : 'guest';
       $insert_sql = 'INSERT INTO tb_comment (message, postname, date) VALUES ("'.$_POST['message'].'", "'.$postname.'", "'.date( 'Y-m-d H:i:s', time()).'")';
+      mysql_query("SET NAMES utf8;");
       mysql_query($insert_sql) or die(mysql_error());
     }
   ?>
