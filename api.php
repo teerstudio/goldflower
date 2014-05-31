@@ -20,7 +20,8 @@
           'fullname' => $objResult['fullname'],
           'image'    => $objResult['image'],
           'detail'   => $objResult['detail']
-        )
+        );
+        $count++;
       }
     }
   }
