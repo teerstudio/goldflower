@@ -1,5 +1,6 @@
 <?php
   include('config.php');
+  header('Content-Type: application/json');
   $action = isset($_GET['action']) ? $_GET['action'] : null;
   $get = isset($_GET['get']) ? $_GET['get'] : null;
   $response = array('data' => array());
