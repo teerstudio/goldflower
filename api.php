@@ -5,6 +5,7 @@
 
   //  action=add
   if($action == 'add'){
+    $kama
 
   }
   //  action=show
@@ -18,6 +19,9 @@
   //  action=delete
   elseif($action == 'delete'){
 
+  }
+  else{
+    $response['data'] = 'API Working.'
   }
 
   echo json_encode($response);
